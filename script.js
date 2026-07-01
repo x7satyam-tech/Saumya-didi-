@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     const frontPortal = document.getElementById("frontPortal");
     const portalEnterBtn = document.getElementById("portalEnterBtn");
     const luxuryMain = document.getElementById("luxuryMain");
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function makeAtmosphere() {
         if (!stardustLayer) return;
+        stardustLayer.innerHTML = ""; 
         for (let i = 0; i < 35; i++) {
             const particle = document.createElement('div');
             particle.className = 'dust-particle';
@@ -56,9 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     makeAtmosphere();
 
-    /* ==========================================================================
-       CANVAS FLAME BLAST SYSTEM
-       ========================================================================== */
     class FireFXParticle {
         constructor(x, y, variant) {
             this.x = x;
@@ -96,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (this.variant === 'firestorm') this.size *= 0.95;
         }
         render() {
+            if(!context) return;
             context.save();
             context.globalAlpha = this.alpha;
             context.translate(this.x, this.y);
@@ -152,11 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* Portal & Standard Interactive Flow Hooks */
+    // High Impact Click Listener Fix for Mobile
     if (portalEnterBtn && frontPortal && luxuryMain && hangingGarland) {
-        portalEnterBtn.addEventListener("click", () => {
+        portalEnterBtn.addEventListener("click", (e) => {
+            e.preventDefault();
             frontPortal.classList.add("dismissed");
             luxuryMain.classList.remove("hidden");
+            window.scrollTo({ top: 0 });
             setTimeout(() => {
                 hangingGarland.style.transform = "translate3d(-50%, 150px, 0)";
             }, 300);
@@ -196,8 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
             balloonPopped = true;
             surpriseBalloon.style.display = 'none';
             
-            deployBurst(evt.clientX, evt.clientY, 'treat', 130);
-            deployBurst(evt.clientX, evt.clientY, 'glimmer', 100);
+            deployBurst(evt.clientX || window.innerWidth/2, evt.clientY || window.innerHeight/2, 'treat', 130);
             
             setTimeout(() => {
                 giftSection.classList.remove("hidden");
@@ -223,42 +223,5 @@ document.addEventListener("DOMContentLoaded", () => {
             albumSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     }
-
-    /* ==========================================================================
-       DYNAMIC IMAGE INJECTION INTELLIGENCE (Live Photo Multi-Uploader)
-       ========================================================================== */
-    if (liveAlbumUploader && scatteredAlbumCanvas) {
-        const sizes = ['card-size-sm', 'card-size-md', 'card-size-lg'];
-        const tilts = ['card-tilt-l', 'card-tilt-r', 'card-tilt-l-heavy', 'card-tilt-r-heavy'];
-
-        liveAlbumUploader.addEventListener("change", (e) => {
-            const items = e.target.files;
-            if (items.length === 0) return;
-
-            Array.from(items).forEach((file) => {
-                if (!file.type.startsWith("image/")) return;
-
-                const reader = new FileReader();
-                reader.onload = (event) => {
-                    const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
-                    const randomTilt = tilts[Math.floor(Math.random() * tilts.length)];
-
-                    const card = document.createElement("div");
-                    card.className = `scatter-photo-card ${randomSize} ${randomTilt}`;
-
-                    card.innerHTML = `
-                        <div class="polaroid-white-frame">
-                            <img src="${event.target.result}" alt="Uploaded Moment">
-                            <div class="polaroid-caption">New Memory 🌸</div>
-                        </div>
-                    `;
-
-                    // Instant prepend to fluid memory lane canvas matrix
-                    scatteredAlbumCanvas.insertBefore(card, scatteredAlbumCanvas.firstChild);
-                };
-                reader.readAsDataURL(file);
-            });
-        });
-    }
 });
-      
+        
