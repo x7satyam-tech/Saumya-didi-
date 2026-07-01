@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Saumya Didi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Luxury Pink Lighting Orbs -->
+    <div class="ambient-glow orb-primary"></div>
+    <div class="ambient-glow orb-secondary"></div>
+
+    <div class="stardust-layer" id="stardustLayer"></div>
+    <canvas id="fireBlastCanvas"></canvas>
+
+    <!-- PERFECTLY VISIBLE HANGING TITLE LETTER ARCHITECTURE -->
+    <div class="hanging-garland-system" id="hangingGarland">
+        <div class="hanging-node"><span>H</span></div>
+        <div class="hanging-node"><span>A</span></div>
+        <div class="hanging-node"><span>P</span></div>
+        <div class="hanging-node"><span>P</span></div>
+        <div class="hanging-node"><span>Y</span></div>
+        <div class="hanging-gap"></div>
+        <div class="hanging-node gold-accent"><span>B</span></div>
+        <div class="hanging-node gold-accent"><span>I</span></div>
+        <div class="hanging-node gold-accent"><span>R</span></div>
+        <div class="hanging-node gold-accent"><span>T</span></div>
+        <div class="hanging-node gold-accent"><span>H</span></div>
+        <div class="hanging-node gold-accent"><span>D</span></div>
+        <div class="hanging-node gold-accent"><span>A</span></div>
+        <div class="hanging-node gold-accent"><span>Y</span></div>
+    </div>
+
+    <!-- FRONT PAGE ENTRY PORTAL WITH MAHADEV TRACE BACKGROUND -->
+    <div class="front-portal-screen" id="frontPortal">
+        <div class="shiva-low-opacity-bg"></div>
+        
+        <!-- Curated "Messy But Clean" Scatter Emojis Layer -->
+        <div class="scattered-emojis-container">
+            <span class="scatter-emoji size-lg pos-1 tilt-left">🎂</span>
+            <span class="scatter-emoji size-sm pos-2 tilt-right">✨</span>
+            <span class="scatter-emoji size-md pos-3 tilt-left">🕯️</span>
+            <span class="scatter-emoji size-lg pos-4 tilt-right">🕉️</span>
+            <span class="scatter-emoji size-sm pos-5 tilt-left">🌸</span>
+            <span class="scatter-emoji size-md pos-6 tilt-right">🌟</span>
+            <span class="scatter-emoji size-lg pos-7 tilt-left">✨</span>
+        </div>
+
+        <div class="portal-glass-card crystal-white-glass">
+            <p class="portal-tagline">A CELEBRATION OF PURE GRACE</p>
+            <h1 class="portal-main-title">Saumya Didi</h1>
+            
+            <!-- Sacred Lord Shiva Center Quote Integration -->
+            <div class="portal-shiva-quote">
+                <p class="shiva-hindi">"सत्य ही शिव है, शिव ही सुंदर है।"</p>
+                <p class="shiva-english">May His divine presence protect you, guide your path, and shower your beautiful life with infinite blessings.</p>
+            </div>
+
+            <p class="portal-date">JULY 7</p>
+            <button class="portal-enter-btn crisp-pulse" id="portalEnterBtn">ENTER CELEBRATION 🌸</button>
+        </div>
+    </div>
+
+    <!-- MAIN EXPERIENCE COMPARTMENT -->
+    <main class="luxury-main-content hidden" id="luxuryMain">
+        <header class="crystal-navbar">
+            <div class="nav-monogram">S & D</div>
+            <div class="nav-date">JULY 7</div>
+        </header>
+
+        <!-- Dynamic Hero Welcome Showcase -->
+        <section class="experience-hero">
+            <span class="hero-tag crisp-pulse">THE REVELRY</span>
+            <h2 class="hero-main-title">Happy Birthday <br><span class="calligraphy-script">to my dearest</span> <br>Saumya Didi</h2>
+        </section>
+
+        <!-- CHRONICLE TIMELINE -->
+        <section class="modular-section">
+            <div class="luxury-divider"><span>I</span></div>
+            <h3 class="modular-title">The Birth Journey</h3>
+            
+            <div class="chronicle-timeline">
+                <div class="timeline-axis"></div>
+                <div class="chronicle-node node-left">
+                    <div class="chronicle-glass-box crystal-white-glass dynamic-hover">
+                        <span class="chronicle-tag">Childhood</span>
+                        <h4 class="chronicle-head">Pure Sparkle</h4>
+                        <p>A beautiful soul entered our lives, bringing pure laughter and vibrant light into our home.</p>
+                    </div>
+                </div>
+                <div class="chronicle-node node-right">
+                    <div class="chronicle-glass-box crystal-white-glass dynamic-hover">
+                        <span class="chronicle-tag">The Growth</span>
+                        <h4 class="chronicle-head">Guiding Light</h4>
+                        <p>Stepping beautifully into an elder sister's role with unparalleled wisdom, care, and protection.</p>
+                    </div>
+                </div>
+                <div class="chronicle-node node-left">
+                    <div class="chronicle-glass-box crystal-white-glass dynamic-hover">
+                        <span class="chronicle-tag">Present</span>
+                        <h4 class="chronicle-head">Timeless Grace</h4>
+                        <p>An emblem of poise, strength, and sophisticated elegance who rules our hearts effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAKE / CANDLE BLOW INTERACTION SECTION -->
+        <section class="modular-section">
+            <div class="luxury-divider"><span>II</span></div>
+            <h3 class="modular-title">The Birthday Ritual</h3>
+            <p class="modular-subtitle">Tap the glowing candle flame to blow it out and release the fires of joy.</p>
+
+            <div class="interactive-cake-stage">
+                <div class="cake-display-card crystal-white-glass dynamic-hover" id="cakeStageCard">
+                    
+                    <div class="cake-assembly-box" id="cakeAssembly">
+                        
+                        <!-- THE CANDLE ARCHITECTURE -->
+                        <div class="candle-fixture" id="candleFlameTarget">
+                            <div class="candle-flame-node" id="candleFlame">
+                                <div class="flame-outer"></div>
+                                <div class="flame-inner"></div>
+                            </div>
+                            <div class="candle-wick"></div>
+                            <div class="candle-wax"></div>
+                            <div class="smoke-trail" id="smokeTrail"></div>
+                        </div>
+
+                        <!-- 3-TIER LUXURY PINK & GOLD CAKE -->
+                        <div class="cake-tiers-group">
+                            <div class="cake-layer layer-upper">
+                                <div class="luxury-frosting"></div>
+                            </div>
+                            <div class="cake-layer layer-lower">
+                                <div class="luxury-frosting"></div>
+                            </div>
+                            <div class="gold-cake-base"></div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Overlay Wish Panel -->
+                <div class="wish-reveal-panel crystal-white-glass hidden" id="wishRevealPanel">
+                    <h3 class="calligraphy-script gold-text text-xl">Make a Wish</h3>
+                    <p class="wish-description">May all your grandest aspirations and sweetest dreams transform into reality, Didi.</p>
+                    <button class="prime-action-btn" id="nextToBalloonBtn">Proceed to Surprise</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURPRISE POP BALLOON SECTION -->
+        <section class="modular-section hidden" id="balloonSection">
+            <div class="luxury-divider"><span>III</span></div>
+            <h3 class="modular-title">The Grand Surprise</h3>
+            <p class="modular-subtitle">Touch the luxury balloon to release your treats.</p>
+            
+            <div class="balloon-arena">
+                <div class="luxury-helium-balloon crisp-pulse" id="surpriseBalloon">
+                    <div class="balloon-tether"></div>
+                    <span class="balloon-text">POP ME</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEMOIR GIFT BOX SECTION -->
+        <section class="modular-section hidden" id="giftSection">
+            <div class="luxury-divider"><span>IV</span></div>
+            <h3 class="modular-title">The Token of Affection</h3>
+
+            <div class="gift-arena">
+                <div class="premium-gift-package crisp-pulse" id="giftPackage">
+                    <div class="package-lid"><div class="satin-v"></div><div class="satin-h"></div></div>
+                    <div class="package-container">
+                        <div class="satin-v"></div><div class="satin-h"></div>
+                    </div>
+                </div>
+
+                <!-- Elegant Pink Glass Letter Display -->
+                <div class="memoir-letter-card crystal-white-glass hidden" id="memoirLetter">
+                    <div class="letter-topline"><span class="stamp-date">July 7</span></div>
+                    <div class="letter-main-prose">
+                        <h4 class="calligraphy-script gold-text text-lg">To My Incredible Didi,</h4>
+                        <p>Having you as my elder sister is one of life's greatest privileges. Your poise, intelligence, and unconditional love inspire me every single day. You bring a touch of class and light to everything you do.</p>
+                        <p>Thank you for being my constant guide, my protector, and my closest confidante. May the universe shield you always, and offer you the immense happiness, success, and luxury that you so deeply deserve.</p>
+                        <p class="letter-sign-off calligraphy-script">With all my love and admiration always,</p>
+                        <p class="letter-author">— Your Loving Kittu</p>
+                        <button class="prime-action-btn" id="goToAlbumBtn" style="margin-top:25px; width:100%;">Open Memory Lane 📸</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: SCATTERED PURE WHITE PHOTO ALBUM SECTION -->
+        <section class="modular-section hidden" id="albumSection">
+            <div class="luxury-divider"><span>V</span></div>
+            <h3 class="modular-title">The Memory Lane</h3>
+            <p class="modular-subtitle">A beautifully scattered archive of our finest memories together, Didi.</p>
+
+            <div class="album-upload-header crystal-white-glass">
+                <label for="liveAlbumUploader" class="premium-upload-label">
+                    <span class="upload-icon">✨</span> UPLOAD MORE MEMORIES
+                </label>
+                <input type="file" id="liveAlbumUploader" accept="image/*" multiple style="display: none;">
+            </div>
+
+            <!-- Scattered Messy But Clean Canvas Layout Wrapper -->
+            <div class="scattered-album-canvas" id="scatteredAlbumCanvas">
+                
+                <!-- Permanent Photo 1 -->
+                <div class="scatter-photo-card card-size-lg card-tilt-l">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/ksnB2CJP/20260426-005114.jpg" alt="Didi Moment 1">
+                        <div class="polaroid-caption">Timeless Smile</div>
+                    </div>
+                </div>
+
+                <!-- Permanent Photo 2 -->
+                <div class="scatter-photo-card card-size-md card-tilt-r">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/Fk3g302b/20260426-005458.jpg" alt="Didi Moment 2">
+                        <div class="polaroid-caption">Pure Grace</div>
+                    </div>
+                </div>
+
+                <!-- Permanent Photo 3 -->
+                <div class="scatter-photo-card card-size-sm card-tilt-l-heavy">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/dsnjJLFV/20260206-235053-2.jpg" alt="Didi Moment 3">
+                        <div class="polaroid-caption">Golden Days</div>
+                    </div>
+                </div>
+
+                <!-- Permanent Photo 4 -->
+                <div class="scatter-photo-card card-size-lg card-tilt-r-heavy">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/7xqBJM3g/20260206-205905-2.jpg" alt="Didi Moment 4">
+                        <div class="polaroid-caption">Elegance</div>
+                    </div>
+                </div>
+
+                <!-- Permanent Photo 5 -->
+                <div class="scatter-photo-card card-size-md card-tilt-l">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/1fV6mG7v/Screenshot-20260701-120603-1.jpg" alt="Didi Moment 5">
+                        <div class="polaroid-caption">Cherished ✨</div>
+                    </div>
+                </div>
+
+                <!-- Permanent Photo 6 -->
+                <div class="scatter-photo-card card-size-sm card-tilt-r">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/N2B4NKWS/Screenshot-20260701-120820-1.jpg" alt="Didi Moment 6">
+                        <div class="polaroid-caption">Sweetest Didi</div>
+                    </div>
+                </div>
+
+                <!-- Permanent Photo 7 -->
+                <div class="scatter-photo-card card-size-lg card-tilt-l-heavy">
+                    <div class="polaroid-white-frame">
+                        <img src="https://i.ibb.co/qSNMqgk/Screenshot-20260701-120913-1.jpg" alt="Didi Moment 7">
+                        <div class="polaroid-caption">Memories Room</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="experience-footer">
+            <p>© 2026 Curated exclusively for Saumya Didi. Created with love by Kittu.</p>
+        </footer>
+    </main>
+
+</body>
+      </html>
+              
